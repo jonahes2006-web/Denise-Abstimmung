@@ -204,7 +204,7 @@
     setTimeout(() => { el.remove(); cb(); }, 1500);
   }
 
-  function vote(key) {
+  window.vote = function(key) {
     if (hasVoted()) return;
     markVoted(key);
     runTransaction(votesRef, (current) => {
